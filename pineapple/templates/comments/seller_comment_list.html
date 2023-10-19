@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} لیست نظرات فروشنده{% endblock title %}
+
+{% block content %}
+    {% for comment in comments %}
+        :نام کامنت گذار {{ comment.name }}<br>
+        :نام فروشنده {{ comment.seller.name }}<br>
+        :متن کامنت {{ comment.text }}<br>
+    {% endfor %}
+{% endblock content %}

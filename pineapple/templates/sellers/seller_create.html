@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}ساخت فروشنده آناناس{% endblock title %}
+
+
+{% block content %}
+    <form action="{% url 'pineapple:seller-create' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ثبت نام</button>
+    </form>
+{% endblock content %}
